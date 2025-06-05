@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Translator Info - Rensora</title>
+  <link rel="icon" href="favicon.jpg" type="image/jpg" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #1e1e1e;
+      color: #ffffff;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      background: linear-gradient(135deg, #ff0000, #007bff);
+      color: white;
+      position: relative;
+    }
+
+    .logo-link {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      text-decoration: none;
+      color: white;
+    }
+
+    header img {
+      height: 40px;
+      width: 40px;
+      object-fit: contain;
+      border-radius: 6px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    /* Dropdown container */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    /* Dropdown button (hamburger) */
+    .dropbtn {
+      font-size: 1.5rem;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+      padding: 0.25rem 0.5rem;
+      user-select: none;
+    }
+
+    /* Dropdown content (hidden by default) */
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      right: 0;
+      background-color: #2b2b2b;
+      min-width: 160px;
+      border-radius: 8px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+      z-index: 1000;
+      text-align: left;
+      padding: 0.5rem 0;
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 10px 16px;
+      text-decoration: none;
+      display: block;
+      font-weight: 600;
+      transition: background-color 0.3s;
+      border-radius: 0 8px 8px 0;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #444;
+    }
+
+    /* Show dropdown on active */
+    .dropdown.show .dropdown-content {
+      display: block;
+    }
+
+    main {
+      max-width: 600px;
+      margin: 2rem auto;
+      font-size: 1.1rem;
+      white-space: pre-line;
+      line-height: 1.6;
+    }
+
+    .btn {
+      margin-top: 2rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #FF4655;
+      color: white;
+      font-weight: 600;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 1rem;
+      text-decoration: none;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      min-width: 220px;
+      user-select: none;
+      transition: filter 0.3s;
+    }
+
+    .btn:hover {
+      filter: brightness(0.85);
+    }
+
+    .google-logo-text {
+      margin-top: 1rem;
+      color: #ccc;
+      font-size: 0.9rem;
+      max-width: 280px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo-link" title="Go to Home">
+      <img src="favicon.jpg" alt="Rensora favicon" />
+      <h1>Rensora</h1>
+    </a>
+
+    <div class="dropdown" id="navDropdown">
+      <button class="dropbtn" aria-haspopup="true" aria-expanded="false" aria-label="Navigation Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="dropdown-content" role="menu" aria-labelledby="navDropdown">
+        <a href="index.html" role="menuitem">Home</a>
+        <a href="translator.html" role="menuitem">Translator Info</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section>
+    <h1>Translator Information</h1>
+    <p>
+     Hello dear visitor, are you interested in Translating for Valotracker ?
+     We would love to have you
+     Note: Translations are voluntarily (non paid) and Free of obligation
+    </p>
+    </section>
+
+    <a href="https://forms.gle/your-form-link" target="_blank" rel="noopener noreferrer" class="btn" aria-label="Open translation form">
+      <i class="fab fa-google"></i> Translation Form
+    </a>
+
+    <div class="google-logo-text">
+      Clicking this button will lead you to our form to apply
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Rensora. All rights reserved.
+  </footer>
+
+  <script>
+    // Dropdown toggle
+    const dropdown = document.getElementById('navDropdown');
+    const button = dropdown.querySelector('.dropbtn');
+
+    button.addEventListener('click', () => {
+      dropdown.classList.toggle('show');
+      // Toggle aria-expanded for accessibility
+      const expanded = button.getAttribute('aria-expanded') === 'true';
+      button.setAttribute('aria-expanded', !expanded);
+    });
+
+    // Close dropdown if clicked outside
+    window.addEventListener('click', (e) => {
+      if (!dropdown.contains(e.target)) {
+        dropdown.classList.remove('show');
+        button.setAttribute('aria-expanded', 'false');
+      }
+    });
+  </script>
+
+</body>
+</html>

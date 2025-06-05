@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rensora</title>
+  <link rel="icon" href="favicon.jpg" type="image/jpg" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #1e1e1e;
+      color: #ffffff;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.5rem 1rem;
+      background: linear-gradient(135deg, #ff0000, #007bff);
+      color: white;
+      position: relative;
+    }
+
+    header a.logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    header a.logo img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .dropdown {
+      position: relative;
+      user-select: none;
+    }
+
+    .dropbtn {
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.2rem;
+      cursor: pointer;
+      padding: 0.25rem 0.5rem;
+      font-weight: 600;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .dropbtn div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      border-radius: 2px;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      right: 0;
+      background-color: #2b2b2b;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+      border-radius: 8px;
+      z-index: 1;
+      overflow: hidden;
+      margin-top: 8px;
+    }
+
+    .dropdown-content.show {
+      display: block;
+    }
+
+    .dropdown-content a {
+      color: white;
+      padding: 10px 16px;
+      text-decoration: none;
+      display: block;
+      transition: background-color 0.3s;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #444;
+    }
+
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      text-align: center;
+    }
+
+    .button-row {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin: 2rem auto;
+    }
+
+    .btn {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      color: #fff;
+      padding: 0.75rem 1.25rem;
+      border-radius: 12px;
+      transition: background-color 0.3s;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      user-select: none;
+    }
+
+    .btn:hover {
+      filter: brightness(0.85);
+    }
+
+    .btn.discord {
+      background-color: #5865F2;
+    }
+
+    .btn.x {
+      background-color: #1DA1F2;
+    }
+
+    .btn.valorant {
+      background-color: #ff4655;
+    }
+
+    .btn.dbd {
+      background-color: #a72c3a;
+    }
+
+    .btn.mailto {
+      background-color: #3a3a3a;
+    }
+
+    .mailto {
+      text-align: center;
+      margin: 3rem auto;
+      color: #ccc;
+    }
+
+    .mailto p {
+      margin-top: 1rem;
+    }
+
+    .mailto-buttons {
+      display: inline-flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    footer {
+      text-align: center;
+      color: #888;
+      padding: 2rem 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="index.html" class="logo" aria-label="Go to homepage">
+      <img src="favicon.jpg" alt="Rensora logo" />
+      Rensora
+    </a>
+
+    <div id="navDropdown" class="dropdown" aria-haspopup="true" aria-expanded="false">
+      <button class="dropbtn" aria-label="Toggle menu" aria-expanded="false" aria-controls="dropdownMenu">
+        <div></div>
+        <div></div>
+        <div></div>
+      </button>
+      <div id="dropdownMenu" class="dropdown-content" role="menu">
+        <a href="index.html" role="menuitem">Home</a>
+        <a href="translator.html" role="menuitem">Translator Info</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h1>ABOUT ME</h1>
+      <p>I'm Rensora - Valorant & DBD enthusiast, tool maker, and part of the ValoTracker team. I build things that help players understand and improve their gameplay. Check out my socials and stats below!</p>
+    </section>
+
+    <div class="button-row">
+      <a class="btn discord" href="https://discord.com/users/929521121475313804" target="_blank" rel="noopener noreferrer" aria-label="Discord profile">
+        <i class="fab fa-discord"></i> Discord
+      </a>
+      <a class="btn x" href="https://x.com/Rensora__" target="_blank" rel="noopener noreferrer" aria-label="X Twitter profile">
+        <i class="fab fa-x-twitter"></i> X (Twitter)
+      </a>
+      <a class="btn valorant" href="https://tracker.gg/valorant/profile/riot/Mr%20Wrong%230302/overview" target="_blank" rel="noopener noreferrer" aria-label="Valorant tracker profile">
+        <i class="fas fa-chart-line"></i> Valorant Tracker
+      </a>
+      <a class="btn dbd" href="https://deadbystats.eu/profile/Rensora" target="_blank" rel="noopener noreferrer" aria-label="Dead by Daylight stats">
+        <i class="fas fa-skull-crossbones"></i> DBD Stats
+      </a>
+    </div>
+
+    <div class="mailto">
+      <div class="mailto-buttons">
+        <a href="mailto:rensora@valotracker.com" target="_blank" rel="noopener noreferrer" class="btn mailto" aria-label="Contact me via email">
+          <i class="fas fa-envelope"></i> Contact Me (ValoTracker)
+        </a>
+        <button onclick="copyEmail()" class="btn mailto" aria-label="Copy email to clipboard">
+          <i class="fas fa-clipboard"></i> Copy Email
+        </button>
+      </div>
+      <p>
+        If you're using a web-client such as Gmail, press the clipboard to copy the email address.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Rensora. All rights reserved.
+  </footer>
+
+  <script>
+    // Dropdown toggle
+    const dropdown = document.getElementById('navDropdown');
+    const button = dropdown.querySelector('.dropbtn');
+    const menu = document.getElementById('dropdownMenu');
+
+    button.addEventListener('click', () => {
+      const isShown = menu.classList.toggle('show');
+      dropdown.setAttribute('aria-expanded', isShown);
+      button.setAttribute('aria-expanded', isShown);
+    });
+
+    // Close dropdown if clicked outside
+    window.addEventListener('click', (e) => {
+      if (!dropdown.contains(e.target)) {
+        menu.classList.remove('show');
+        dropdown.setAttribute('aria-expanded', false);
+        button.setAttribute('aria-expanded', false);
+      }
+    });
+
+    // Copy email function
+    function copyEmail() {
+      const email = "rensora@valotracker.com";
+      navigator.clipboard.writeText(email).then(() => {
+        alert("Email copied to clipboard!");
+      }).catch(() => {
+        alert("Failed to copy email.");
+      });
+    }
+  </script>
+
+</body>
+</html>
